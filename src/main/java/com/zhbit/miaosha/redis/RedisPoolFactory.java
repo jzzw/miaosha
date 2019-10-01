@@ -9,6 +9,7 @@ import redis.clients.jedis.JedisPoolConfig;
 public class RedisPoolFactory {
     @Autowired
     RedisConfig redisConfig;
+
     @Bean
     public JedisPool JedisFactory(){
         JedisPoolConfig poolConfig  = new JedisPoolConfig();

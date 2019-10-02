@@ -9,6 +9,7 @@ import com.zhbit.miaosha.redis.RedisService;
 import com.zhbit.miaosha.util.MD5Util;
 import com.zhbit.miaosha.util.UUIDUtil;
 import com.zhbit.miaosha.vo.LoginVo;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 public class MiaoshaUserService {
 
 
-    private  static final String  COOKIS_NAME_TOKEN = "token" ;
+    public  static final String  COOKIS_NAME_TOKEN = "token" ;
 
      @Autowired
     private MiaoshaUserDao miaoshaUserDao;
@@ -50,11 +51,26 @@ public class MiaoshaUserService {
         }
         //生成cookie
         String token = UUIDUtil.uuid();
+        addCookie(response,token,user);
+        return true;
+    }
+
+    public MiaoshaUser getByToken(HttpServletResponse response,String token) {
+        if(StringUtils.isEmpty(token)){
+            return  null;
+        }
+        MiaoshaUser user = redisService.get(MiaoshaUserKey.token,token,MiaoshaUser.class);
+        if(user!=null){
+            addCookie(response,token,user);
+        }
+        return user;
+    }
+
+    private void addCookie(HttpServletResponse response,String token,MiaoshaUser user){
         redisService.set(MiaoshaUserKey.token,token,user);
         Cookie cookie = new Cookie(COOKIS_NAME_TOKEN,token);
         cookie.setMaxAge(MiaoshaUserKey.token.expireSeconds());
         cookie.setPath("/");
         response.addCookie(cookie);
-        return true;
     }
 }

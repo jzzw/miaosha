@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Class-Path: spring-boot-starter-logging-1.5.8.RELEASE.jar thymeleaf-sp
+ ring4-2.1.5.RELEASE.jar logback-core-1.1.11.jar spring-boot-starter-j
+ dbc-1.5.8.RELEASE.jar tomcat-annotations-api-8.5.23.jar commons-pool2
+ -2.4.2.jar tomcat-embed-websocket-8.5.23.jar spring-boot-starter-tomc
+ at-1.5.8.RELEASE.jar spring-web-4.3.12.RELEASE.jar spring-boot-starte
+ r-1.5.8.RELEASE.jar spring-tx-4.3.12.RELEASE.jar spring-boot-1.5.8.RE
+ LEASE.jar jackson-databind-2.8.10.jar log4j-over-slf4j-1.7.25.jar val
+ idation-api-1.1.0.Final.jar spring-boot-autoconfigure-1.5.8.RELEASE.j
+ ar mybatis-spring-boot-autoconfigure-1.3.1.jar unbescape-1.1.0.RELEAS
+ E.jar jboss-logging-3.3.1.Final.jar spring-jdbc-4.3.12.RELEASE.jar sp
+ ring-context-4.3.12.RELEASE.jar spring-webmvc-4.3.12.RELEASE.jar comm
+ ons-lang3-3.6.jar spring-boot-test-1.5.8.RELEASE.jar thymeleaf-layout
+ -dialect-1.4.0.jar hibernate-validator-5.3.5.Final.jar spring-beans-4
+ .3.12.RELEASE.jar javassist-3.21.0-GA.jar jackson-annotations-2.8.0.j
+ ar spring-expression-4.3.12.RELEASE.jar snakeyaml-1.17.jar spring-boo
+ t-starter-validation-1.5.8.RELEASE.jar spring-core-4.3.12.RELEASE.jar
+  jackson-core-2.8.10.jar tomcat-embed-core-8.5.23.jar slf4j-api-1.7.2
+ 5.jar spring-aop-4.3.12.RELEASE.jar spring-boot-starter-thymeleaf-1.5
+ .8.RELEASE.jar tomcat-juli-8.5.23.jar logback-classic-1.1.11.jar groo
+ vy-2.4.12.jar fastjson-1.2.38.jar classmate-1.3.4.jar druid-1.0.5.jar
+  thymeleaf-2.1.5.RELEASE.jar mybatis-3.4.5.jar tomcat-embed-el-8.5.23
+ .jar jedis-2.9.0.jar ognl-3.0.8.jar jcl-over-slf4j-1.7.25.jar mybatis
+ -spring-boot-starter-1.3.1.jar mysql-connector-java-5.1.44.jar jul-to
+ -slf4j-1.7.25.jar spring-boot-starter-web-1.5.8.RELEASE.jar commons-c
+ odec-1.10.jar tomcat-jdbc-8.5.23.jar mybatis-spring-1.3.1.jar
+Main-Class: com.zhbit.miaosha.MainApplication
+

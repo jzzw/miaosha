@@ -12,7 +12,7 @@ public class MD5Util {
         return DigestUtils.md5Hex(src);
     }
     //第一次加密，MD5( 用户输入的密码+固定字符加密 )
-    public static String inputPassFormPass(String inputPass){
+    public static String inputPassToFormPass(String inputPass){
         String src =  ""+salt.charAt(4)+salt.charAt(2)+inputPass+salt.charAt(5)+salt.charAt(3);
         return md5(src);
     }
@@ -24,7 +24,7 @@ public class MD5Util {
     }
     //依次调用以上两个方法
     public static String inputPassToDBPass(String inputPass,String saltDB){
-       String fromPass = inputPassFormPass(inputPass);
+       String fromPass = inputPassToFormPass(inputPass);
        String dbPass = formPassToDBPass(fromPass,saltDB);
        return dbPass;
     }
